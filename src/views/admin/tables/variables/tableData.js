@@ -1,0 +1,31 @@
+
+import navbarImage from "assets/img/layout/Navbar.png"
+export default[
+  { userID: "#87", email: "user1@example.com", phone: "1234567890", name: "Chandler Jacobi", job: "Direct Security Executive", status: "Active", date: "Mon Feb 03 2020 04:13:15 GMT-0300 (Brasilia Standard Time)" },
+  { userID: "#88",email: "user2@example.com", phone: "0987654321", name: "Monica Geller", job: "Lead Data Analyst", status: "Inactive", date: "Tue Apr 14 2021 12:45:30 GMT-0300 (Brasilia Standard Time)" },
+  { userID: "#89", email: "user3@example.com", phone: "5678901234", name: "Ross Geller", job: "Senior Scientist", status: "Active", date: "Wed Jun 16 2021 08:15:45 GMT-0300 (Brasilia Standard Time)" },
+  { userID: "#90", email: "user4@example.com", phone: "8765432987", name: "Rachel Green", job: "Marketing Manager" , status: "Pending", date: "Fri Aug 20 2022 14:20:00 GMT-0300 (Brasilia Standard Time)" },
+  { userID: "#91", email: "user5@example.com", phone: "9123456789", name: "Phoebe Buffay", job: "Creative Designer", status: "Active", date: "Sat Nov 05 2022 16:35:25 GMT-0300 (Brasilia Standard Time)" },
+  { userID: "#92", email: "user6@example.com", phone: "6543210987", name: "Joey Tribbiani", job: "Actor", status: "Inactive", date: "Thu Jan 12 2023 10:30:00 GMT-0300 (Brasilia Standard Time)" },
+  { userID: "#93", email: "user7@example.com", phone: "7890123456", name: "Janice Hosenstein", job: "Sales Executive", status: "Pending", date: "Sun Mar 01 2020 07:00:15 GMT-0300 (Brasilia Standard Time)" },
+  { userID: "#94", email: "user8@example.com", phone: "4567890123", name: "Gunther CentralPerk", job: "Cafe Manager", status: "Active", date: "Fri May 20 2022 17:45:10 GMT-0300 (Brasilia Standard Time)" },
+  { userID: "#95", email: "user9@example.com", phone: "3210987654", name: "Susan Bunch", job: "HR Specialist",  status: "Inactive", date: "Wed Jul 14 2021 09:25:00 GMT-0300 (Brasilia Standard Time)" },
+  { userID: "#96", email: "user10@example.com", phone: "2345678901", name: "Carol Willick", job: "Finance Consultant",  status: "Active", date: "Tue Oct 05 2021 13:30:45 GMT-0300 (Brasilia Standard Time)" },
+  { userID: "#97", email: "user11@example.com", phone: "8765432190", name: "Emily Waltham", job: "Travel Agent", status: "Pending", date: "Thu Dec 15 2022 11:00:30 GMT-0300 (Brasilia Standard Time)" },
+  { userID: "#98", email: "user12@example.com", phone: "1230984567", name: "Richard Burke", job: "Surgeon", status: "Active", date: "Mon Apr 11 2021 15:10:00 GMT-0300 (Brasilia Standard Time)" },
+  { userID: "#99", email: "user13@example.com", phone: "3456789012", name: "Mike Hannigan", job: "Musician",  status: "Inactive", date: "Fri Jun 18 2021 18:15:00 GMT-0300 (Brasilia Standard Time)" },
+  { userID: "#100", email: "user14@example.com", phone: "4560123789", name: "Tag Jones", job: "Assistant", status: "Active", date: "Sat Aug 28 2021 10:00:15 GMT-0300 (Brasilia Standard Time)" },
+  { userID: "#101", email: "user15@example.com", phone: "6547893210", name: "David Scientist", job: "Researcher", status: "Pending", date: "Tue Sep 20 2022 19:20:00 GMT-0300 (Brasilia Standard Time)" },
+  { userID: "#102", email: "user16@example.com", phone: "5671238904", name: "Charlie Wheeler", job: "Teacher",  status: "Active", date: "Thu Nov 03 2022 14:15:25 GMT-0300 (Brasilia Standard Time)" },
+  { userID: "#103", email: "user17@example.com", phone: "7894561230", name: "Barry Farber", job: "Dentist",  status: "Inactive", date: "Wed Jan 15 2023 09:45:15 GMT-0300 (Brasilia Standard Time)" },
+  { userID: "#104", email: "user18@example.com", phone: "7891234560", name: "Frank Buffay", job: "Mechanic", status: "Active", date: "Mon May 02 2022 16:30:00 GMT-0300 (Brasilia Standard Time)" },
+  { userID: "#105", email: "user19@example.com", phone: "1234567899", name: "Erica Bing", job: "Writer", status: "Pending", date: "Thu Jun 10 2021 11:00:00 GMT-0300 (Brasilia Standard Time)" },
+  { userID: "#106", email: "user20@example.com", phone: "7896541230", name: "Nora Bing", job: "Actress",  status: "Inactive", date: "Wed Aug 18 2021 14:25:30 GMT-0300 (Brasilia Standard Time)" },
+  { userID: "#107", email: "user21@example.com", phone: "4561237890", name: "Estelle Leonard", job: "Agent",status: "Active", date: "Tue Sep 22 2020 13:15:20 GMT-0300 (Brasilia Standard Time)" },
+  { userID: "#108", email: "user22@example.com", phone: "5678901234", name: "Janine Lecroix", job: "Dancer",  status: "Pending", date: "Fri Oct 15 2021 15:30:00 GMT-0300 (Brasilia Standard Time)" },
+  { userID: "#108", email: "user22@example.com", phone: "5678901234", name: "Janine Lecroix", job: "Dancer",  status: "Pending", date: "Fri Oct 15 2021 15:30:00 GMT-0300 (Brasilia Standard Time)" },
+  { userID: "#108", email: "user22@example.com", phone: "5678901234", name: "Janine Lecroix", job: "Dancer",  status: "Pending", date: "Fri Oct 15 2021 15:30:00 GMT-0300 (Brasilia Standard Time)" },
+  { userID: "#108", email: "user22@example.com", phone: "5678901234", name: "Janine Lecroix", job: "Dancer",  status: "Pending", date: "Fri Oct 15 2021 15:30:00 GMT-0300 (Brasilia Standard Time)" },
+  { userID: "#108", email: "user22@example.com", phone: "5678901234", name: "Janine Lecroix", job: "Dancer",  status: "Pending", date: "Fri Oct 15 2021 15:30:00 GMT-0300 (Brasilia Standard Time)" },
+  { userID: "#109", email: "user23@example.com", phone: "9876543210", name: "Leonard Green", job: "Doctor", status: "Active", date: "Sun Dec 05 2021 10:45:00 GMT-0300 (Brasilia Standard Time)" }
+]

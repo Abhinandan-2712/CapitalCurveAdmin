@@ -1,0 +1,123 @@
+import React, { useState, useEffect } from "react";
+import { VscNewFile } from "react-icons/vsc";
+import axios from "axios";
+import { toast } from "react-hot-toast";
+
+function EditStages({ isOpen, onClose, onSubmit, Stages }) {
+    const [formData, setFormData] = useState({
+        _id:"",
+        step: "",
+        profitTarget: "",
+        profitMaintainedDays: "",
+        overallLossLimit: "",
+        dailyLossLimit: "",
+        totalTradingDays: "",
+    });
+   
+
+    useEffect(() => {
+        if (Stages && Stages._id) {
+            setFormData({
+                _id: Stages._id,
+                step: Stages.step,
+                profitTarget: Stages.profitTarget || "",
+                profitMaintainedDays: Stages.profitMaintainedDays || "",
+                overallLossLimit: Stages.overallLossLimit || "",
+                dailyLossLimit: Stages.dailyLossLimit || "",
+                totalTradingDays: Stages.totalTradingDays || "",
+            });
+        }
+    }, [Stages]);
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prev) => ({
+            ...prev,
+            [name]: value,
+        }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        if (!formData.profitTarget || !formData.profitMaintainedDays || !formData.overallLossLimit || !formData.dailyLossLimit || !formData.totalTradingDays) {
+            toast.error("All fields are required.");
+            return;
+        }
+
+        try {
+            const token = localStorage.getItem("token");
+            if (!token) {
+                toast.error("You are not logged in. Please log in again.");
+                return;
+            }
+
+            const response = await axios.post(
+                `https://capital-curve-apis.onrender.com/api/stages/edit-stage/${formData._id}`,
+                formData,
+                {
+                    headers: {
+                        "Content-Type": "application/json",
+                        token: token,
+                    },
+                }
+            );
+            // console.log(response)
+
+            if (response.data.success) {
+                toast.success("Stages updated successfully!");
+                onClose();
+                onSubmit(formData);
+            } else {
+                toast.error(response.data.message || "Failed to update Stages. Please try again.");
+            }
+        } catch (error) {
+            console.error("Error:", error.response?.data || error.message);
+            toast.error(error.response?.data?.message || "Failed to update Stages. Please try again.");
+        }
+    };
+
+    if (!isOpen) return null;
+
+    return (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+            <div className="bg-white dark:bg-navy-900 p-6 rounded-lg border border-blueSecondary dark:border-brand-400">
+                <h2 className="text-xl font-bold text-gray-700 dark:text-white mb-4">Edit Stages</h2>
+                <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-4">
+                    {["profitTarget", "profitMaintainedDays", "overallLossLimit","dailyLossLimit","totalTradingDays"].map((key) => (
+                        <div key={key}>
+                            <label className="block text-sm font-medium text-gray-700 dark:text-white">
+                                {key.charAt(0).toUpperCase() + key.slice(1)}
+                            </label>
+                            <input
+                                type="text"
+                                name={key}
+                                value={formData[key]}
+                                onChange={handleChange}
+                                className="mt-1 p-2 w-full border rounded-md bg-lightPrimary dark:bg-navy-800 text-gray-700 dark:text-white"
+                                required
+                            />
+                        </div>
+                    ))}
+                    <div className="flex justify-end gap-4 mt-4 ">
+                        <button
+                            type="button"
+                            onClick={onClose}
+                            className="px-4 py-2 bg-gray-300 rounded-md text-gray-700 dark:bg-gray-600 dark:text-white"
+                        >
+                            Cancel
+                        </button>
+                        <button
+                            type="submit"
+                            className="bg-blueSecondary text-white px-4 py-2 rounded-md hover:bg-brandLinear dark:bg-brand-400 dark:hover:bg-blueSecondary"
+                        >
+                            <VscNewFile className="inline-block mr-2" /> Update
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    );
+}
+
+export default EditStages;

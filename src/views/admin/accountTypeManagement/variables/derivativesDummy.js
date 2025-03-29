@@ -1,0 +1,63 @@
+export default [
+    {
+      id: 1,
+      type: "Futures",
+      contractSize: "1000 Units",
+      marginRequirement: "10%",
+      leverage: "10x",
+      expirationDate: "2025-06-30",
+      settlementType: "Cash",
+      Price: "100000",
+      status: "Inactive",
+      created_at: "2025-01-01T10:00:00+05:30",
+      addsOn: [
+        { id: "980097", name: "Cover Day Limits", description: "cover day limits", status: "Active" },
+        { id: "109", name: "Investment Strategies", description: "add investor with your own risk analyses", status: "Inactive" },
+        { id: "876", name: "Support Management", description: "provide support 24*7", status: "Active" },
+      ],
+      User: [
+        { ID: 1, name: "John Doe", Status: "Active", Code: "USER1234", Email: "john.doe@example.com", Number: "+1 555-123-4567", Commission: 1500, Usages: 75 },
+        { ID: 2, name: "Alice Brown", Status: "Inactive", Code: "USER5678", Email: "alice.brown@example.com", Number: "+1 555-111-2222", Commission: 1800, Usages: 65 },
+      ],
+    },
+    {
+      id: 2,
+      type: "Options",
+      contractSize: "500 Units",
+      marginRequirement: "5%",
+      leverage: "20x",
+      expirationDate: "2025-07-15",
+      settlementType: "Physical",
+      Price: "200000",
+      status: "Active",
+      created_at: "2025-01-02T12:15:00+05:30",
+      addsOn: [
+        { id: "234", name: "Premium Signals", description: "access premium trading signals", status: "Active" },
+        { id: "435", name: "Risk Management", description: "advanced risk management tools", status: "Active" },
+      ],
+      User: [
+        { ID: 3, name: "Charlie Davis", Status: "Active", Code: "USER9101", Email: "charlie.davis@example.com", Number: "+1 555-333-4444", Commission: 2000, Usages: 85 },
+        { ID: 4, name: "David Miller", Status: "Active", Code: "USER3344", Email: "david.miller@example.com", Number: "+1 555-444-5555", Commission: 2200, Usages: 90 },
+      ],
+    },
+    {
+      id: 3,
+      type: "Swaps",
+      contractSize: "Variable",
+      marginRequirement: "15%",
+      leverage: "5x",
+      expirationDate: "2025-08-20",
+      settlementType: "Cash",
+      Price: "300000",
+      status: "Inactive",
+      created_at: "2025-01-03T09:30:00+05:30",
+      addsOn: [
+        { id: "712", name: "Margin Trading", description: "trade with leverage", status: "Inactive" },
+        { id: "333", name: "Educational Courses", description: "access to exclusive courses", status: "Active" },
+      ],
+      User: [
+        { ID: 5, name: "Sophia Johnson", Status: "Active", Code: "USER5566", Email: "sophia.johnson@example.com", Number: "+1 555-666-7777", Commission: 2500, Usages: 100 },
+        { ID: 6, name: "Michael Scott", Status: "Active", Code: "USER1235", Email: "michael.scott@example.com", Number: "+1 555-777-6666", Commission: 3000, Usages: 90 },
+      ],
+    },
+  ];
